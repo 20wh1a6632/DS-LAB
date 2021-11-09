@@ -1,0 +1,44 @@
+   #include<stdio.h>
+   int i;
+   int linear_search(int n,int a[],int key){
+       for(i=0;i<n;i++){
+           if(a[i]==key){
+               return i;
+            }
+        }
+       return -1;
+  }
+  int main(){
+      int n,a[20],key,result;
+      printf("enter number of elements");
+      scanf("%d",&n);
+      for(i=0;i<n;i++){
+          scanf("%d",&a[i]);
+      }
+      printf("enter key");
+      scanf("%d",&key);
+      result=linear_search(n,a,key);
+      if(result==-1){
+          printf("element not found");
+      }
+      else{
+          printf("element found at %d position",result+1);
+      }
+      return -1;
+  }
+OUTPUT:  
+enter number of elements5
+12 
+45
+74
+85
+47
+enter key47
+element found at 5 position
+enter number of elements4
+14
+45
+75
+94
+enter key15
+element not found
