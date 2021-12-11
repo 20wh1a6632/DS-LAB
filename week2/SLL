@@ -99,7 +99,7 @@ printf("%d\n",temp->data);
 }
 void reverse_display(struct node*head){
 if(head!=NULL){
-return reverse_display(head->link);
+ reverse_display(head->link);
 printf("%d\n",head->data);
 }
 }
